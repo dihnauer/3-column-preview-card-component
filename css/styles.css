@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /* COLORS */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --background: hsl(0, 0%, 95%);
+  --heading: hsl(0, 0%, 95%);
+  --buttons: hsl(0, 0%, 95%);
+}
+
+html, body{
+  width: 100%;
+  height: 100vh;
+}
+
+h1{
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  color: var(--heading);
+
+  margin: 0 0 20px 40px;
+}
+
+p, button{
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.container{
+  max-width: 1440px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-item{
+  display: flex;
+  align-items: center;
+
+  width: 300px;
+  height: 700px;
+}
+
+p{
+  width: 70%;
+  color: var(--paragraphs);
+  line-height: 25px;
+
+  margin: 0 0 50px 40px;
+}
+
+button{
+  width: 130px;
+  height: 45px;
+  border-radius: 35px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.orange-card{
+  background-color: var(--bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+
+.orange-card button{
+  color: var(--bright-orange);
+}
+
+.orange-card button:hover{
+  color: var(--buttons);
+  background: var(--bright-orange);
+  border: 2px solid var(--buttons);
+}
+
+.dark-cyan-card{
+  background-color: var(--dark-cyan);
+}
+
+.dark-cyan-card button{
+  color: var(--dark-cyan);
+}
+
+.dark-cyan-card button:hover{
+  color: var(--buttons);
+  background: var(--dark-cyan);
+  border: 2px solid var(--buttons);
+}
+
+.very-dark-cyan-card{
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+.very-dark-cyan-card button{
+  color: var(--very-dark-cyan);
+}
+
+.very-dark-cyan-card button:hover{
+  color: var(--buttons);
+  background: var(--very-dark-cyan);
+  border: 2px solid var(--buttons);
+}
+
+.icon-img{
+  margin: 40px 0 20px 40px;
+}
+
+.btn{
+  margin: 0 0 40px 40px;
+}
+
+@media (max-width: 375px) {
+  .container{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .card-item{
+    width: 300px;
+    height: auto;
+  }
+
+  .orange-card{
+    border-radius: 10px 10px 0 0;
+  }
+
+  .very-dark-cyan-card{
+    border-radius: 0 0 10px 10px;
+  }
+}
